@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title>Oncalab | Tecnología de Diagnóstico</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <link rel="icon" type="image/jpg" href="../../assets/images/icon.jpg">  
+  <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Stardos+Stencil" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+
+    <%= render "layouts/navbar" %>
+
+	            <%= yield %>
+
+
+
+	<script>
+		$(document).ready(function() {
+	    	$('select').material_select();
+
+	    	$(".dropdown-button").dropdown();
+	    	$(".button-collapse").sideNav();
+	    	new WOW().init();
+	    	
+	    	$("a[href='#top']").click(function() {
+			  $("html, body").animate({ scrollTop: 0 }, "slow");
+			  return false;
+			});
+
+			$('.collapsible').collapsible();
+		    $('.slider').slider();
+		    $('.materialboxed').materialbox();
+		    $('.modal-trigger').leanModal();
+		});
+	</script>
+		<%= render "layouts/footer" %>
+</body>
+</html>
